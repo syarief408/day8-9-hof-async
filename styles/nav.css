@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto:wght@400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f3f3;
+  padding: 10px 5rem;
+  font-family: "Montserrat", "Roboto", sans-serif;
+}
+
+.nav-left ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+
+.nav-left ul li {
+  margin-right: 25px;
+}
+
+.nav-left img {
+  width: 40px;
+  height: 30px;
+  padding-top: 6px;
+}
+
+.nav-left ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+.nav-left ul li a:hover {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.nav-left ul li a.active {
+  font-weight: bold;
+}
+
+.nav-right a {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Hamburger Menu */
+.navbar-toggle > button {
+  z-index: 999;
+  background-color: black;
+  padding: 15px 20px;
+  top: -11px;
+  position: absolute;
+}
+
+#nav-icon3 {
+  width: 45px;
+  height: 35px;
+  position: relative;
+  /* margin: 50px auto; */
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  z-index: 1;
+}
+
+#nav-icon3 span {
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  background: black;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+#nav-icon3 span:nth-child(1) {
+  top: 0px;
+}
+/* 14px */
+#nav-icon3 span:nth-child(2),
+#nav-icon3 span:nth-child(3) {
+  top: 14px;
+}
+
+#nav-icon3 span:nth-child(4) {
+  top: 28px;
+}
+
+#nav-icon3.open span:nth-child(1) {
+  top: 14px;
+  width: 0%;
+  left: 50%;
+}
+
+#nav-icon3.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#nav-icon3.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#nav-icon3.open span:nth-child(4) {
+  top: 14px;
+  width: 0%;
+  left: 50%;
+}
+
+.navbar-toggle,
+#nav-icon3 {
+  display: none;
+}
+
+.hamburger-nav-container {
+  font-size: 18px;
+  display: none;
+}
+
+.hamburger-nav-container .hamburger-active {
+  background-color: black;
+  border-radius: 10px;
+  color: white;
+  padding: 5px 0;
+}
+
+.nav-wrapper {
+  background-color: #d3d3d3;
+  padding: 20px 0;
+}
+
+/* .hamburger-nav-container > a .hamburger-active {
+  background-color: orangered;
+  color: red;
+} */
+
+.hamburger-nav-container a {
+  color: black;
+
+  margin: 0px 14rem;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+#barsmenu {
+  display: none;
+}
+/* Responsive */
+
+@media only screen and (max-width: 768px) {
+  .navbar-toggle,
+  #nav-icon3 {
+    display: block;
+  }
+
+  .nav-right,
+  .nav-left ul li:nth-child(n + 2) {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 514px) {
+  nav {
+    padding: 10px 1rem;
+  }
+
+  .hamburger-nav-container a {
+    margin: 20px 1rem;
+  }
+}
+
+/* Hamburger Menu */
+/* .menu-toggle {
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 45px;
+  height: 24px;
+  left: -8px;
+  top: -3px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: black;
+  border-radius: 3px;
+}
+
+/* Hamburger Animation */
+/* .menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg);
+}
+.menu-toggle input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg);
+}  */

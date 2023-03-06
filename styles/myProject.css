@@ -1,0 +1,334 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: px solid red;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+}
+
+.container {
+  background-color: #ffffff;
+  font-family: poppins;
+}
+
+/* Form Title Add My Project */
+.title {
+  text-align: center;
+  padding-top: 60px;
+  margin-bottom: 40px;
+}
+
+.container-form {
+  width: 600px;
+  margin: 0px auto;
+  padding-bottom: 100px;
+}
+
+/* Form Project Name */
+.projectName label {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.projectName input {
+  width: 100%;
+  padding: 9px;
+  font-size: 17px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-family: poppins;
+  border: none;
+  box-sizing: border-box;
+  box-shadow: 3px 3px 4px 3px #64646464;
+}
+
+/* Form Date */
+.form-date {
+  display: flex;
+  justify-content: space-between;
+}
+
+.start-date label {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.start-date input {
+  width: 100%;
+  padding: 9px;
+  font-size: 17px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-family: poppins;
+  border: none;
+  box-sizing: border-box;
+  box-shadow: 3px 3px 4px 3px #64646464;
+}
+
+.end-date label {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.end-date input {
+  width: 100%;
+  padding: 9px;
+  font-size: 17px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-family: poppins;
+  border: none;
+  box-sizing: border-box;
+  box-shadow: 3px 3px 4px 3px #64646464;
+}
+
+/* Form Description */
+.form-description label {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.form-description textarea {
+  width: 100%;
+  padding: 9px 9px 90px;
+  font-size: 17px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-family: poppins;
+  resize: none;
+  border: none;
+  box-sizing: border-box;
+  box-shadow: 3px 3px 4px 3px #64646464;
+}
+
+/* Form Checkbox Technologies */
+.form-technologies .title {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.container-tech {
+  display: grid;
+  grid-template-columns: 50% auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.container-tech label {
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  color: #2c2c2c;
+}
+
+.container-tech input {
+  position: relative;
+  top: 4px;
+  height: 22px;
+  width: 22px;
+  cursor: pointer;
+  box-shadow: 1px 2px 4px 1px #00000064;
+}
+
+.checkbox1 {
+  margin-bottom: 20px;
+}
+
+/* Form Upload */
+.form-upload .title {
+  font-size: 22px;
+  font-weight: bold;
+  padding: 0px;
+}
+
+.choose {
+  display: block;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 3px 3px 4px 3px #64646464;
+  padding: 9px 9px 9px 0;
+  margin: 5px 0px 30px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.choose span {
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #c4c4c4;
+  color: #616161;
+}
+
+.choose input {
+  display: none;
+}
+
+.choose i {
+  float: right;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+/* Form Button */
+.btn-submit button {
+  float: right;
+  border: none;
+  padding: 5px 30px;
+  border-radius: 20px;
+  font-size: 20px;
+  margin-top: 18px;
+  color: white;
+  background-color: #0800ff;
+  box-shadow: 3px 3px 4px 3px #888888;
+  cursor: pointer;
+}
+
+.btn-submit button:hover {
+  float: right;
+  border: none;
+  padding: 5px 30px;
+  border-radius: 20px;
+  font-size: 20px;
+  margin-top: 18px;
+  color: white;
+  background-color: #00ff1a;
+  box-shadow: 3px 3px 4px 3px #888888;
+  cursor: pointer;
+}
+
+/* Container List My Project */
+.container-list {
+  background-color: #c6c6c6;
+  font-family: poppins;
+}
+
+/* Title My Project */
+.title-project {
+  text-align: center;
+  padding-top: 60px;
+  margin-bottom: 40px;
+}
+
+/* Container Card List Project */
+.container-project {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0px auto;
+  padding-bottom: 50px;
+}
+
+/* Card List Project */
+.list-project {
+  background-color: aliceblue;
+  width: 360px;
+  border: none;
+  margin: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 4px 3px #888888;
+}
+
+/* Container Images */
+.list-project img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  height: 250px;
+}
+
+/* Container Title */
+.title-content {
+  font-size: 18px;
+  margin-top: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+/* Container Durasi */
+.title-durasi {
+  color: #2c2c2c;
+  margin-bottom: 25px;
+}
+
+/* Container Description */
+.desc-content {
+  text-align: justify;
+  margin-bottom: 25px;
+}
+
+/* Container Icon */
+.icons {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.icons i {
+  margin-right: 20px;
+}
+
+/* Container Button */
+.form-btn {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-edit button {
+  border: none;
+  padding: 5px 0px;
+  width: 150px;
+  border-radius: 8px;
+  font-size: 20px;
+  color: white;
+  background-color: #0000ff;
+  box-shadow: 3px 2px 4px 1px #888888;
+  cursor: pointer;
+}
+
+.btn-edit button:hover {
+  border: none;
+  /* padding: 5px 70px; */
+  border-radius: 8px;
+  font-size: 20px;
+  color: white;
+  background-color: #ff0000;
+  box-shadow: 3px 2px 4px 1px #888888;
+  cursor: pointer;
+}
+
+.btn-delete button {
+  border: none;
+  width: 150px;
+  padding: 5px 0px;
+  border-radius: 8px;
+  font-size: 20px;
+  color: white;
+  background-color: #0000ff;
+  box-shadow: 3px 2px 4px 1px #888888;
+  cursor: pointer;
+}
+
+.btn-delete button:hover {
+  border: none;
+  /* padding: 5px 60px; */
+  border-radius: 8px;
+  font-size: 20px;
+  color: white;
+  background-color: #ff0000;
+  box-shadow: 3px 2px 4px 1px #888888;
+  cursor: pointer;
+}

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="/styles/myProject.css" />
+    <link rel="stylesheet" href="/styles/myProject-copy.css" />
+    <link rel="stylesheet" href="styles/nav.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>My Project</title>
+  </head>
+  <body>
+    <!-- Nav Start -->
+    <nav>
+      <div class="nav-left">
+        <ul>
+          <li><img class="" src="./asset/logo-dumbways.png" alt="" /></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="myProject.html" class="active">My Project</a></li>
+          <li><a href="testimonials.html">My Testimonial</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <a href="contact.html">Contact Me</a>
+      </div>
+
+      <div class="navbar-toggle" id="nav-icon3">
+        <div onclick="openHamburger()">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <div class="hamburger-nav-container" id="hamburger-nav-container">
+      <div class="nav-wrapper">
+        <a href="index.html">Home</a>
+        <a href="myProject.html" class="hamburger-active">My Project</a>
+        <a href="contact.html">Contact Me</a>
+        <a href="testimonials.html">My Testimonial</a>
+      </div>
+    </div>
+
+    <!-- Nav End -->
+
+    <div class="project-form">
+      <h1>Add New Project</h1>
+      <div class="project-wrap">
+        <form
+          onsubmit="getData(event)"
+          class="project-input"
+          id="input-project"
+        >
+          <div class="input">
+            <label for="name" class="label-project">Project Name</label>
+            <input type="text" id="name" class="name-project" required />
+          </div>
+          <div class="input-date">
+            <div class="input">
+              <label for="start-date" class="label-start-date"
+                >Start Date</label
+              >
+              <input type="date" id="start-date" class="start-date" required />
+            </div>
+            <div class="input">
+              <label for="end-date" class="label-end-date">End Date</label>
+              <input type="date" id="end-date" class="end-date" required />
+            </div>
+          </div>
+          <div class="input">
+            <label for="description" class="label-description"
+              >Project Description</label
+            >
+            <textarea
+              id="description"
+              class="description"
+              cols="50"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+          <div class="input-grid">
+            <label for="technologies" class="label-technologies"
+              >Technologies</label
+            >
+            <div class="input-checkbox">
+              <label for="tech1" class="icon-technologies">
+                <input type="checkbox" id="tech1" class="nodejs-icon" />
+                Node JS
+              </label>
+              <label for="tech2" class="icon-technologies">
+                <input type="checkbox" id="tech2" class="nextjs-icon" />
+                Next JS
+              </label>
+              <label for="tech3" class="icon-technologies">
+                <input type="checkbox" id="tech3" class="reactjs-icon" />
+                React JS
+              </label>
+              <label for="tech4" class="icon-technologies">
+                <input type="checkbox" id="tech4" class="typescript-icon" />
+                TypeScript
+              </label>
+            </div>
+          </div>
+          <div class="input">
+            <label for="upload" class="label-upload">Upload Image</label>
+            <input type="file" id="upload" class="upload-image" required />
+          </div>
+
+          <button type="submit" class="btnSubmit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- List Project Start -->
+    <div class="container-list">
+      <h1 class="title-project">MY PROJECT</h1>
+      <div class="container-project" id="cardProject">
+        <div class="list-project">
+          <img src="assets/image/as.png " />
+          <a href="projectDetail.html" class="title-content">
+            <h3>Android Studio</h3>
+          </a>
+
+          <div class="title-durasi">
+            <p>Durasi : 5 Day</p>
+          </div>
+
+          <div class="desc-content">
+            <p>
+              Android Studio is the official integrated development environment
+              for Google's Android operating system, built on JetBrains'
+              IntelliJ IDEA software and designed specifically for Android
+              development. It is available for download on Windows, macOS and
+              Linux based operating systems.
+            </p>
+          </div>
+
+          <div class="icons">
+            <div class="icon1">
+              <i class="fa-brands fa-android fa-2x"></i>
+            </div>
+          </div>
+
+          <div class="form-btn">
+            <div class="btn-edit">
+              <button type="button">Edit</button>
+            </div>
+
+            <div class="btn-delete">
+              <button type="button" onclick="deleteData()">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- List Project End -->
+
+    <!-- <div id="container-project" class="project container">
+      <h2>My Project</h2>
+      <div class="project-list" id="project-list"></div>
+    </div> -->
+    <script src="/script/myProject.js"></script>
+    <script src="/script/storage.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/script/script.js">
+
+      $(document).ready(function () {
+        $("#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4").click(function () {
+          $(this).toggleClass("open");
+        });
+      });
+    </script>
+  </body>
+</html>
